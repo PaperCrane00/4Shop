@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -60,9 +61,10 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        $categories = Category::all();
+        $products = Product::where('category_id', $category->id)->get();
+        $categories = Category::where('id', $category->id)->get();
         return view('admin.categories.edit')
-                ->with(compact('category', 'categories'));
+                ->with(compact('categories') + compact('category') + compact('products'));
     }
 
     /**

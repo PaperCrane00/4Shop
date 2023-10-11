@@ -18,7 +18,6 @@
         <tr>
             <td>{{ $category->name }}</td>
             <td><a href="{{ route('admin.categories.edit', $category->id) }}">Aanpassen</a></td>
-            <td>{{ $category->product->title }}</td>
         </tr>
     @endforeach
 </table>
