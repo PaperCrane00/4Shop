@@ -9,6 +9,15 @@ form{
 	margin-top: 2em;
 }
 
+.product-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discount p{
+    color: red;
+}
+
 fieldset{
 	margin: 1em 0;
 }
@@ -84,6 +93,9 @@ header{
 
 .product-body{
 	width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 	padding: 1em 2em;
 }
 
