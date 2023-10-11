@@ -30,6 +30,12 @@ header{
     align-items: center;
 }
 
+.contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .my-table{
 	background: lightgray;
     padding: 30px 20px;
