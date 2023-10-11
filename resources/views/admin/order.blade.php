@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-	
+
 	<div class="d-flex justify-content-between align-items-center">
 		<div>
 			<h4>Bestelling #{{ $order->slug }}</h4>
@@ -12,11 +12,11 @@
 			{{ method_field('DELETE') }}
 			<button type="submit" class="btn btn-danger">Annuleren</a>
 		</form>
-		
+
 	</div>
 
 	<table class="table mt-4">
-	
+
 		<?php $total = 0; ?>
 		@foreach($order->rules as $rule)
 			<tr>

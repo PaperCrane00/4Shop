@@ -10,4 +10,8 @@ class Product extends Model
     {
     	return $this->hasMany(Type::class);
     }
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
 }
